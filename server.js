@@ -10,9 +10,16 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-//--------
+//-------
+//mongoose connection
+mongoose.connect(
+    proce.env.MONGODB_URI || "mongodb://localhost/workout", {
 
-//mongoose connection ???
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+});
 
 //--------
 
