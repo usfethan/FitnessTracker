@@ -50,3 +50,16 @@ router.post("/api/workouts", ({body}, res) => {
     });
 });
 
+//get stats 
+
+router.get("/api/workouts/range", (req, res) => {
+    db.Workout.find({}).then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+module.exports = router;
