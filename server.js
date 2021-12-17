@@ -23,6 +23,6 @@ app.use(express.static("public"));
 //get stats
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
