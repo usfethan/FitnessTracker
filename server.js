@@ -24,6 +24,8 @@ mongoose.connect(
 //--------
 
 //Routes//
+app.use(require("./routes/apiRoutes.js"));
+app.use(require("./routes/htmlRoutes.js"));
 //get workouts
 //add exercise
 //create workout
