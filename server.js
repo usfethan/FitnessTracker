@@ -13,7 +13,7 @@ app.use(express.static("public"));
 //-------
 //mongoose connection
 mongoose.connect(
-    proce.env.MONGODB_URI || "mongodb://localhost/workout", {
+    process.env.MONGODB_URI || "mongodb://localhost/workout", {
 
         useNewUrlParser: true,
         useFindAndModify: false,
